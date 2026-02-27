@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function CreateClick(){
+      x = prompt("Enter Folder Name", "");
+      if(x == null){
+        document.write("cancelled");
+      }else if( x == ""){
+        document.write("enter the folder name");
+      }else{
+        document.querySelector("p").innerText +="Folder Name:" + x ;
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <button onclick="CreateClick()">add</button>
+<p></p>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input</title>
+        <script>
+            function CreateClick(){
+               result = prompt("Enter Folder Name","");
+               if(result==null){
+                   document.write("You Canceled..");
+               } else if (result==""){
+                   document.write("Please Enter Name");
+               } else {
+                   document.querySelector("p").innerHTML += "Folder Created :" + result +"<br>";
+               }
+            } jQuery 
+        </script>
+    </head>
+    <body>
+        <button onclick="CreateClick()">Create Folder</button>
+        <p></p>
+    </body>
+</html>
+
+
+
+
+
+
+
+

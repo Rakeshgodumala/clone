@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        
+        <script type="text/javascript">
+            function bodyload(){
+                
+                pic.src="../public/images/jail. IPS Arrested.png";
+              
+               a = document.getElementsByName("pic");                 
+                alert("Total no. of elements using pic:" + a.length);
+              
+                
+                x = document.getElementsByName("game");                 
+                alert("Total no. of elements using game:" + x.length);
+              
+            }
+         
+        </script>
+
+
+
+    </head>
+    <body class="container-fluid" onload="bodyload()">
+
+        <div>
+            <img width="100" height="100" name="pic" border="1">
+        </div>
+        <form name="frmRegister">
+            <h1>Register</h1>
+            <input type="email">
+            <input type="button" name="btn-Button"   name="btn btn-info"   class="btn btn-info" id="btnButton"> 
+        </form>
+        <form name="frmLogin">
+            <h1>Login</h1>
+         
+            <input type="email"  name="game">
+            <input type="button"  class="btn btn-info"   name="btn-Login" id="btnLogin">
+           
+        </form>
+
+     
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body onload="body()">
+
+
+  <dl>
+
+  </dl>
+  
+  <script>
+    var information = [
+      {
+        "Subject": "HTML",
+        "Description": "It is a mark up language"
+      },
+      {
+        "Subject": "CSS",
+        "Description": "It is used for styling"
+      },
+      {
+        "Subject": "Javascript",
+        "Description": "It is used for functionality"
+      }
+    ]
+
+    for(let infor of information){
+      var dt = document.createElement("dt");
+      dt.innerText = infor.Subject
+     dt.style.fontWeight = "bold"
+     var dd =  document.createElement("dd");
+     dd.innerText = infor.Description
+     document.querySelector("dl").appendChild(dt)
+     document.querySelector("dl").appendChild(dd)
+
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function bodyload(){
+      document.getElementById("txt").innerHTML="It is a id <b> selector</b>";
+      document.getElementById("txt-btn").innerText="selectors";
+      document.getElementById("txt-outter").outerHTML="outer HTML";
+
+
+
+
+
+
+    }
+  </script>
+</head>
+<body onload="bodyload()">
+
+    <p id="txt"></p>
+ 
+
+  <button id="txt-btn"></button>
+
+  <h1>
+    <p id="txt-outter"></p>
+  </h1>
+ 
+
+  
+</body>
+</html>

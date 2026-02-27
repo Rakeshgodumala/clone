@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width='device-width', initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Create a Folder</h1>
+
+  <button onclick="btn()">Create Folder</button>
+  <p></p>
+
+  <script>
+    function btn(){
+     let x =  prompt("Create a Folder");
+     if(x == null){
+      document.querySelector("p").innerHTML="Cancelled";
+     }else if(x == " "){
+      document.querySelector("p").innerHTML="Enter your name";
+        
+      }
+      else {
+      document.querySelector("p").innerHTML += "Folder Created:  " + x + "<br>";
+      
+
+      }
+    }
+
+  </script>
+  
+</body>
+</html>

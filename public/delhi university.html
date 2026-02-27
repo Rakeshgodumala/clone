@@ -1,0 +1,61 @@
+<html>
+    <head>
+    
+        <title>link</title>
+        <style>
+
+nav li{
+    display: inline;
+    color: #fe1212;
+    margin-right: 50px;
+    font-size: 50px;
+  
+}
+nav{
+    background-color: gray;
+  
+}
+
+.inside{
+    
+    color: black;
+    background-color: rgb(255, 0, 174);
+}
+.inside:target{
+    background-color: gray;
+    color: white;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+        </style>
+    </head>
+    <body>
+        <nav>
+           <a href="#html"> <li>HTML</li> </a>
+           <a href="#css"> <li>css</li> </a>
+           <a href="#js"> <li>js</li></a>
+        </nav>
+        <div class="inside"  id="html">
+            <dl>
+              <dt >HTML</dt>
+                <dd>Mark up language</dd>
+            </dl>
+        </div>
+        <div class="inside"  id="css">
+            <dl>
+               <dt >CSS</dt>
+                <dd>STYLE </dd>
+            </dl>
+        </div>
+        <div class="inside"  id="js">
+            <dl>
+             <dt>JAVASCRIPT</dt>
+                <dd>PROGRAMMING language</dd>
+            </dl>
+        </div>
+    </body>
+</html>

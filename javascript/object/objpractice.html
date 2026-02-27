@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+<body>
+
+  <script>
+    let myDetails = {
+      name:"Rakesh",
+      Course:'MCA',
+     sub_ject : 'Javascript',
+    }
+
+    // --------------------to KHS value---------------
+
+    // console.log(typeof(myDetails), myDetails)
+    // console.log(myDetails.Course)
+    // console.log(myDetails.sub_ject)
+    // console.log(myDetails["name"])
+
+    // --------------------to update value---------------
+
+    // myDetails.sub_ject= 'js'
+    // console.log(myDetails.sub_ject)
+
+
+
+
+    // ---------------------To Delete the values ------------
+
+    // delete myDetails.Course
+    // console.log(typeof(myDetails), myDetails)
+
+
+
+    
+    // // ---------------------To add the values ------------
+
+    //  myDetails.Course='Python'
+    // console.log(typeof(myDetails), myDetails)
+
+
+
+        
+    // myDetails.Course = "MBA"
+    // console.log(myDetails) 
+
+
+// *-----------------------    nested object----------------------------------------*
+
+
+// let Subjects = {
+//   English: 'Language',
+//   Python : 'Programming Language',
+//   HTML : 'Mark up Language',
+//   UI : {
+//     Javascript : 'Programming language and client side',
+//     MongoDB : 'Database',
+//     Nodejs: 'used for backend',
+//     React : 'Java script frame work'
+//   }
+// }
+// // console.log(Subjects.UI.MongoDB)
+
+// console.log(Subjects["HTML"])
+// console.log(Subjects["UI"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ var product = {
+   brand: 'Apple',
+   price : '1,50,000',
+   Modelname : 'Apple 16 pro  max',
+   color : 'grey',
+ displayprice : function price(){
+   
+   console.log(`the mobile company name is ${product.brand}`)
+   console.log(`the mobile price is ${product['price']}`)
+
+//   //  ------------------accessing this----------------
+   console.log(`the mobile model name is ${this['Modelname']}`)
+   console.log(`the mobile color  is ${this.color}`)
+
+
+ }
+
+ }
+ product.displayprice()
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+// console.log('my name is Pokiri'.length)
+// console.log('my name is Pokiri'.toLowerCase())
+// console.log('my name is Pokiri'.toUpperCase())
+// console.log('my name is Pokiri'.replace('Pokiri', "Wanted"))
+
+
+
+// // !******Even Number print********************
+// for(var x = 1; x<=30; x++){
+//   if(x%2 === 0){
+//     console.log(x)
+//   }
+
+// }
+
+// // !******odd Number print********************
+// for(var x = 1; x<=30; x++){
+//   if(x%2 === 1){
+//     console.log(x)
+//   }
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let details = {
+//   name:"Kunjal",
+//   roll: 24,
+//   Section: 'A',
+//   score: 87,
+//   percentage:35,
+ 
+// }
+
+
+// for(let det in details)
+//   (`name : ${details.name === true}` ? console.log("it is valid") : console.log("invalid"))
+
+
+
+
+
+// for(let x=50; x>=0; x--)
+// (x%2===0) ? console.log("the even numbers are: ",x) : console.log("the odd numbers are: ",x);
+
+  
+
+
+  </script>
+  
+</body>
+</html>

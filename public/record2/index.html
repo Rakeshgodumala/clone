@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form validation using HTML and JavaScript</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 style="text-align: center;">REGISTRATION FORM</h1>
+    <form name="RegForm" onsubmit="return stu()" method="post">
+        <p>Name: <input type="text" size="65" name="Name" /></p><br />
+        <p>Address: <input type="text" size="65" name="Address" /></p><br />
+        <p>E-mail Address: <input type="text" size="65" name="EMail" /></p><br />
+        <p>Password: <input type="password" size="65" name="Password" /></p><br />
+        <p>Telephone: <input type="text" size="65" name="Telephone" /></p><br />
+        <p>
+            SELECT YOUR COURSE
+            <select name="Subject">
+                <option>MTECH</option>
+                <option>MCA</option>
+                <option>MBA</option>
+                <option>M.COM</option>
+            </select>
+        </p><br /><br />
+        <p>Comments: <textarea cols="55" name="Comment"></textarea></p>
+        <p><input type="submit" value="send" name="Submit" />
+        <input type="reset" value="Reset" name="Reset" /></p>
+    </form>
+    <script src="index.js">
+        function stu() {
+            // JavaScript validation code (see below)
+        }
+    </script>
+</body>
+</html>

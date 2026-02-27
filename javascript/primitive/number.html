@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONCLICK</title>
+</head>
+<script>
+
+  function book(){
+    let x = document.getElementById("lst").value;
+    let total = parseInt(x)*100;
+    document.querySelector("option").innerText="Total money is";
+  document.write("Total price :" + total)
+    
+  }
+
+
+  // please  increase my marks
+</script>
+<body>
+  <h1>BookmyShow</h1>
+  <fieldset>
+    <legend>Select Ticket</legend>
+    
+    <select id="lst">
+      <option >0</option>
+
+      <option >1</option>
+      <option >2</option>
+      <option >3</option>
+      <option >4</option>
+      <option >5</option>
+      <option >6</option>
+
+
+    </select>
+   <p id="txt"> </p>
+  <div>  <button onclick="book()">Book</button></div>
+  </fieldset>
+  
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONCLICK</title>
+</head>
+<body>
+  <h1>BookmyShow</h1>
+  <fieldset>
+    <legend>Select Ticket</legend>
+
+    <label for="lst">Tickets:</label>
+    <select id="lst" onchange="showTotal()">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+
+    <span id="totalMoney" style="margin-left: 10px;">Total: ₹0</span>
+
+    <div>
+      <button onclick="book()">Book</button>
+    </div>
+  </fieldset>
+
+  <script>
+    function showTotal() {
+      let x = document.getElementById("lst").value;
+      let total = parseInt(x) * 100;
+      document.getElementById("totalMoney").innerText = "Total: ₹" + total;
+    }
+
+    function book() {
+      let x = document.getElementById("lst").value;
+      let total = parseInt(x) * 100;
+      document.write("Successfully Book Ticket you paid : ₹" + total);
+    }
+
+
+    var z = 'abc';
+    let age = 20;
+    msg =" Hello!" +" " + z +" "+ "you will be " + (age+1) + " "+"next year";
+    document.write(msg)
+  </script>
+</body>
+</html>

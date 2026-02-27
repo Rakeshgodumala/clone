@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+           ul {
+               display: flex;
+               list-style: none;
+           }
+           li::before {
+               content: ">>>";
+           }
+           li:first-child::before {
+               content: "*"; 
+           }
+           
+        </style>
+    </head>
+    <body>
+       <h2>BreadCrumb</h2>
+       <ul>
+           <li>Home</li>
+           <li>Electronics</li>
+           <li>Mobiles</li>
+           <li>Samsung</li>
+           <li>J8</li>
+       </ul>
+    </body>
+</html>

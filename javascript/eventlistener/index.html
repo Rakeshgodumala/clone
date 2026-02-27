@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn"> Click me</button>
+
+
+  <script>
+   let buttonelement = document.querySelector('#btn');
+  //  buttonelement = addEventListener('click', event => console.log('I am clicked'));
+
+// let behaviour =  event => console.log('I am already click');
+// buttonelement = addEventListener('click', behaviour)
+
+
+
+
+// buttonelement = addEventListener('click', event =>console.log(new Date))
+
+// let date = event => console.log(new Date)
+// buttonelement = addEventListener('click', date);
+
+
+
+
+
+
+
+
+// ***************remove event listener ***********************************
+
+let behaviour =  event => console.log('I am already click');
+buttonelement = addEventListener('click', behaviour);
+
+
+let date = event => console.log(new Date)
+buttonelement = addEventListener('click', date);
+
+
+// *******see remove listener
+
+// buttonelement = removeEventListener('click', behaviour);
+
+// buttonelement = removeEventListener('click', date);
+
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  
+  <title>Document</title>
+</head>
+<body class="container-fluid" onload="body()">
+
+  <div class="row">
+
+    <div class="col">
+      <ol>
+       
+      </ol>
+    </div>
+
+
+    <div class="col">
+      <select>
+
+      </select>
+    </div>
+
+    <div class="col">
+      <ul class="list-unstyled">
+    
+      </ul>
+
+    </div>
+
+
+    <div class="col">
+      <button class="btn btn-group-vertical"></button>
+
+    </div>
+
+
+    <div class="col">
+      <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <td>Select Category</td>
+          </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+  
+
+
+  <script>
+    let product = ["ALL", "Samsung Mobile", "Samsung Bluetooth", "Iphone", "Airpods"];
+
+    // product.push("Sony Camera")
+    // product.pop()
+    // product.unshift("Electronic")
+    // product.shift()
+    // product.splice(2,0,"Samsung Laptop")
+    // product.splice(3,1)
+ 
+    function body(){
+      for(let mobile of product){
+
+        var lst = document.createElement("li");
+        lst.innerHTML = mobile;
+        document.querySelector("ol").appendChild(lst);
+
+        var opt = document.createElement("option");
+        opt.innerHTML= mobile;
+        document.querySelector("select").appendChild(opt);
+
+        var ulst = document.createElement("li");
+        ulst.innerHTML= ` <input type="checkbox"> ${mobile}`;
+       
+        document.querySelector("ul").appendChild(ulst);
+
+
+        var btn = document.createElement("button");
+        btn.innerHTML=mobile;
+        btn.className="btn btn-primary ";
+        document.querySelector("button").appendChild(btn);
+
+
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
+        td.innerHTML = mobile;
+        tr.appendChild(td)
+
+        document.querySelector("tbody").appendChild(tr)
+
+      
+
+
+
+
+      }
+
+    }
+  </script>
+</body>
+
+
+
+
+
+</html>

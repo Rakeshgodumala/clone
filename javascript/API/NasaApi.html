@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+  <title>Document</title>
+</head>
+<body class="container-fluid" onload="body()">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Rover id</th>
+        <th>Name</th>
+        <th>Photo</th>
+        <th>Camera Name</th>
+      
+      </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+
+  </table>
+
+
+
+  <script>
+
+    function LoadCategory(){
+      fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KE Y")
+      .then(function(response){
+        return response.json();
+      })
+      .then(function(data){
+        for(var item of data.photos){
+          var tdid = document.createElement("td");
+          var tr = document.createElement("tr");
+          var tdname = document.createElement("td");
+          var tdPhoto = document.createElement("td");
+          var tdrover = document.createElement("td");
+         
+
+          tdname.innerHTML=item.camera.name;
+          tdid.innerHTML=item.id;
+          tdrover.innerHTML = item.rover.id; 
+          var img = document.createElement("img");
+          img.src=item.img_src;
+          img.width="350";
+          img.height="350";
+          tdPhoto.appendChild(img);
+
+          tr.appendChild(tdid);
+          tr.appendChild(tdname);
+        
+          tr.appendChild(tdPhoto);
+          tr.appendChild(tdrover);
+ 
+
+          document.querySelector("tbody").appendChild(tr);
+
+      
+
+
+        }
+      })
+
+    }
+    function body(){
+      LoadCategory()
+      
+
+    }
+  </script>
+</body>
+</html>

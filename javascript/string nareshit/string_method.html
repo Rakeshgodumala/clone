@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function txtchange(){
+      let username = document.getElementById("txt").value;
+      let msg = document.getElementById("msg")
+
+      if(username.charCodeAt(0)>=65 && username.charCodeAt(0)<=90){
+    msg.innerHTML=`Valid Username  ${username}`.fontcolor("green").bold().italics();
+      }else{
+        msg.innerHTML="First Letter must be Capital".fontcolor("red").bold().italics();
+      }
+    
+   
+    }
+
+  </script>
+</head>
+<body>
+  
+<form action="post">
+  <label for="name">Name:</label>
+  <input onblur="txtchange()" type="text" id="txt">
+  <button>Book</button>
+  <div id="msg"></div>
+</form>
+  
+</body>
+</html>

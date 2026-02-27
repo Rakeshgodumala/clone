@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input</title>
+        <script>
+            function CreateClick(){
+                 result = prompt("Enter Folder Name","");
+               if(result==null){
+                   document.write(`<span style="color: red;  font-weight: bold; font-size: 50px" >You Canceled..&#128546 </span>`);
+               } else if (result==""){
+                   document.write(`<span style="color: red;  font-weight: bold; font-size: 50px" > Please Enter Name </span>`);
+               } else {
+                
+                   document.querySelector("p").innerHTML += ` <span style="color: green; font-weight: bold; font-size: 50px"> Folder Created : ${result}</span>`;
+               }
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <button onclick="CreateClick()">Create Folder</button>
+        <p></p>
+    </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  
+  <title>Document</title>
+</head>
+<body class="container-fluid" onload="body()">
+  <h2>Add New Category</h2>
+  <div class="input-group w-25">
+      <input type="text" class="form-control" placeholder="New Category Name" id="txt">
+      <button onclick="9 ()" class="btn btn-success">Add Category</button>
+  </div>
+
+  <div class="row">
+
+    <div class="col">
+      <ol>
+       
+      </ol>
+    </div>
+
+
+    <div class="col">
+      <div class="mb-5">
+        <select>
+
+        </select>
+      </div>
+
+    <div>
+      <button  onclick="Remove()" class="btn btn-link"> Remove Item</button>
+
+      <button  onclick="allRemove()" class="btn btn-link"> Remove ALL Item</button>
+
+
+    </div>
+    </div>
+
+    <div class="col">
+      <ul class="list-unstyled">
+    
+      </ul>
+
+    </div>
+
+
+    <div class="col">
+      <button id="bwn" class="btn btn-group-vertical"></button>
+
+    </div>
+
+
+    <div class="col">
+      <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <td>Select Category</td>
+          </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+  
+
+
+  <script>
+    let product = ["ALL", "Samsung Mobile", "Samsung Bluetooth", "Iphone", "Airpods"];
+
+    function allRemove(){
+     let removeall = confirm(`Are you sure?  you want to remove all item`);
+     if(removeall == true){
+      document.querySelector("ol").innerHTML="";
+      document.querySelector("select").innerHTML="";
+      document.querySelector("ul").innerHTML="";
+      document.getElementById("bwn").innerHTML="";
+      document.querySelector("tbody").innerHTML="";
+     }
+
+
+    }
+    function LoadCategory(){
+      product.sort();
+     allRemove()
+
+
+      
+      for(let mobile of product){
+
+var lst = document.createElement("li");
+lst.innerHTML = mobile;
+document.querySelector("ol").appendChild(lst);
+
+var opt = document.createElement("option");
+opt.innerHTML= mobile;
+document.querySelector("select").appendChild(opt);
+
+var ulst = document.createElement("li");
+ulst.innerHTML= ` <input type="checkbox"> ${mobile}`;
+
+document.querySelector("ul").appendChild(ulst);
+
+
+var btn = document.createElement("button");
+btn.innerHTML=mobile;
+btn.className="btn btn-primary";
+document.getElementById("bwn").appendChild(btn);
+
+
+var tr = document.createElement('tr');
+var td = document.createElement('td');
+td.innerHTML = mobile;
+tr.appendChild(td)
+
+document.querySelector("tbody").appendChild(tr)
+
+
+
+
+
+
+}
+
+
+    }
+
+    function add(){
+      let text = document.getElementById("txt").value;
+      product.push(text);
+      let askadd = confirm("Do you want to add item?  ")
+      document.getElementById("txt").value="";
+
+      if(askadd == true){
+        alert(`${text} was added Successfully!`);
+
+      LoadCategory()
+
+      // to clean name in text box
+
+      document.getElementById("txt").value="";
+      }
+
+    }
+
+    function Remove(){
+     let remove_item =  document.querySelector("select").value;
+     let selectindex = product.indexOf(remove_item);
+
+     let permission = confirm("Are you sure? You wan't to Remove item")
+     if(permission == true){
+      product.splice(selectindex,1);
+     alert(`${remove_item} WAS SUCCESSFULLY REMOVED`);
+
+      LoadCategory()
+     }
+    
+                    
+    }
+ 
+    function body(){
+      LoadCategory()
+      
+  
+    }
+  </script>
+</body>
+</html>

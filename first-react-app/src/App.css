@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 1em;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1em;
+}
+
+.home-page {
+  padding: 1em;
+}
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.category-filter button {
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.category-filter button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.articles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body onload="bodyload()">
+
+  
+  <select class="select">
+
+
+  </select>
+
+  
+  
+</body>
+
+<script>
+
+  function Verify(){
+    const arr = ["Algebra","Mango", "Mobile"];
+    
+    for(let categories of arr){
+      let option = document.createElement("option");
+      option.text = categories;
+      option.value = categories;
+      document.querySelector(".select").appendChild(option);
+    }
+
+  
+
+  }
+
+  function bodyload(){
+    Verify();
+  }
+</script>
+</html>

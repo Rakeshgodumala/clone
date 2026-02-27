@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form with Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .form-container {
+      width: 300px;
+      background-color: white;
+      padding: 20px;
+      margin: 100px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Login</h2>
+  <div class="error" id="errorMsg"></div>
+  <input type="text" id="name" placeholder="Enter your name">
+  <input type="password" id="password" placeholder="Enter your password">
+  <button onclick="handleLogin()">Login</button>
+</div>
+
+<script>
+  function handleLogin() {
+    var name = document.getElementById("name").value.trim();
+    var password = document.getElementById("password").value.trim();
+    var errorMsg = document.getElementById("errorMsg");
+
+    if (name === "") {
+      errorMsg.innerHTML = "Please enter your name";
+      return;
+    }
+    if (password === "") {
+      errorMsg.innerHTML = "Please enter your password";
+      return;
+    }
+
+    errorMsg.innerHTML = ""; // Clear error
+    alert("Login successful!");
+  }
+</script>
+
+</body>
+</html>

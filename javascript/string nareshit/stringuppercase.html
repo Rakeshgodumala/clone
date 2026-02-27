@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function changetxt(){
+      let username = document.getElementById("txt").value;
+      let msg = document.getElementById("msg");
+      if(username.charCodeAt(0)>=65 && username.charCodeAt(0)<=95){
+        msg.innerHTML=`It is Valid ${username}.`.fontcolor("green");
+      }else{
+        msg.innerHTML=`First Letter is Capital only`.fontcolor("red").bold()
+      }
+      // document.getElementById("txt").value = username.toUpperCase();
+    }
+  </script>
+</head>
+<body>
+
+  <input onblur ="changetxt()" type="text" id= "txt">
+  <div id="msg"></div>
+  <button>Book</button>
+</body>
+</html>
+

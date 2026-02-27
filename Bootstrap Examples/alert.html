@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<style>
+  
+
+  /* @media all and (max-width: 400px) {
+  .btn {
+    display: block;
+    margin-top: 10px;
+    clear:both;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .alert-subtitle {
+    display: block;
+    clear:both;
+  }
+}
+ */
+
+ @media all and (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      .alert {
+        padding: 1rem;
+      }
+      .btn {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    @media all and (max-width: 400px) {
+      .alert-subtitle {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+      .btn {
+        margin-top: 10px;
+        display: block;
+      }
+    }
+
+</style>
+
+<body class="container-fluid">
+
+<h1>Alerts</h1>
+<div class="alert alert-danger alert-dismissible">
+  <h3 class="alert-danger">Added button</h3>
+  <p class="alert-subtitle">Are you sure want to delete button</p>
+<a class="alert-link" href="#"> Help?</a>
+<button data-bs-dismiss="alert" class="btn-close"></button>
+
+<span class="btn">
+<button  data-bs-dismiss="alert" class="bg-success ">OK</button>
+
+
+
+<button class="badge p-2 text-info"> <span class="bi bi-bell-slash-fill"></span> Notification <span class="bg-success  badge rounded rounded-circle"> 10</span> </button>
+
+</span>
+</div>
+
+  
+  
+
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

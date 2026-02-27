@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>djshj</title>
+</head>
+<body>
+
+<fieldset>
+
+  <legend><button  onclick="ProcuctDetail()">Get Product Detail</button></legend>
+  <dl id="container" style="display: none;">
+  <dt>Name:</dt>
+  <dd id="lbname"></dd>
+
+  <dt>Price</dt>
+  <dd id="lbprice"></dd>
+
+  <dt>Stock</dt>
+  <dd id="lbstock"></dd>
+
+  <dt>Preview</dt>
+  <dd id="img"></dd>
+
+  <dt>Shipped To.</dt>
+  <dd id="lbcities"></dd>
+
+  <dt>Ratting</dt>
+  <dd id="lbratting"></dd>
+
+  </dl>
+
+</fieldset>
+
+  
+
+<script>
+  function ProcuctDetail(){
+
+    document.getElementById("container").style.display="block";
+
+    fetch("./product.json")
+    .then((response)=>{
+      return response.json()
+    })
+    .then((product)=>{
+      const imgContainer = document.getElementById("img");
+        imgContainer.innerHTML = ""; // Clear any previous image
+        const img = document.createElement("img");
+        img.src = product.Preview;
+        img.width = 80;
+        img.height = 80;
+        img.alt = "Product Image";
+        imgContainer.appendChild(img);
+
+        
+      document.getElementById("lbname").innerHTML = product.Name;
+
+
+      document.getElementById("lbprice").innerHTML = product.Price;
+
+      document.getElementById("lbstock").innerHTML = product.Stock;
+      // document.getElementById("lbpreview").src = product.Preview;
+
+      document.getElementById("lbcities").innerHTML =  product.Cities.join("<br>");
+      document.getElementById("lbratting").innerHTML = `${product.Ratting.Rate} <br> ${product.Ratting.Count}`;
+ 
+
+
+
+
+      
+    
+    })
+
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<script>
+  
+var value =  ["A","True", "25", ["Nike", "Tiger"],function(){document.write("Function in Array")}];
+document.write("Number: "  + value[0] + "<br>");
+
+document.write("Number:" + value[1]+ "<br>");
+
+document.write("Number:" + value[2]+ "<br>");
+document.write("Number:" + value[3][0]+ "<br>");
+document.write("Number:" + value[3][1] + "<br>");
+document.write("Name=" + value[4]());
+
+
+</script>
+
+
+/*---------- array map -------*/
+<script>
+    var categories = ["Electronics", "Footwear", "Fashion"];
+    categories.map(function(category){
+        document.write(`<a href=${category}>${category}</a> &nbsp;`);
+    });
+ </script>

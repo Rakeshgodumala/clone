@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Exam</title>
+   <style>
+  #user+span{
+    display: none ;
+
+  }
+  #user:disabled{
+    background-color: lightgray;
+    color: black;
+    border: none;
+  }
+
+  #user:disabled+span{
+    color: red;
+    display: block;
+  }
+  #user:enabled+span{
+    color: green;
+    display: inline;
+  }
+  
+   </style>
+
+    </head>
+
+    <body>
+        User
+        <input type="text" size="100" id="user" enabled value="WEB DEVELOPMENT"> <span>It can not modify.</span>
+    </body>
+</html>

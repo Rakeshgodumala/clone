@@ -1,0 +1,19 @@
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin-left:20px;
+}
+li:nth-last-child(2n){
+    color: red;
+}
+
+li::after{
+    content: "-->";
+    margin-left: 5px;
+}
+li:last-child::after{
+    content:" ";
+}

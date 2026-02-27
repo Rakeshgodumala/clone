@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<script>
+    function loginclick(){
+let x = document.getElementById("txt").value.trim();
+let y = document.getElementById("password").value.trim();
+let z = document.getElementById("error")
+
+
+if(x === ""){
+  z.innerHTML="PLEASE ENTER NAME"
+  return;
+}
+
+if(y === ""){
+  z.innerHTML="PLEASE ENTER password"
+  return;
+}
+
+
+    }
+  </script>
+</head>
+<body>
+
+  <div>
+    <form action="POST">
+
+      <div id="error"></div>
+      <label for="name">Name</label>
+      <input type="text" id="txt">
+      <br>
+      <br>
+      <br>
+
+
+      <label for="password">password</label>
+      <input type="text" id="password">
+      <br>
+      <br>
+
+
+      <br>
+
+      <input type="file" accept=".jpg, .png" required>
+      <button onclick="loginclick()">Login</button>
+      
+
+
+    </form>
+
+
+  </div>
+  
+</body> 
+
+
+
+</html>

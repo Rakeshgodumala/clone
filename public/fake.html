@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #animatedImage {
+            width: 300px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Animation effect */
+        @keyframes bounce {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .clicked {
+            animation: bounce 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click the Image for Animation</h1>
+        <img id="animatedImage" src="https://placekitten.com/400/400" alt="Cute Cat">
+    </div>
+
+    <script>
+        document.getElementById("animatedImage").addEventListener("click", function() {
+            // Add the animation class to the image
+            this.classList.add("clicked");
+
+            // Remove the animation class after animation ends to allow retriggering the effect
+            this.addEventListener("animationend", function() {
+                this.classList.remove("clicked");
+            });
+        });
+    </script>
+</body>
+</html>

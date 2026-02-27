@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <fieldset>
+    <legend> Payment Details</legend>
+
+  <dl>
+
+
+    <dt>Card Number:</dt>
+    <dd><input type="text" onkeyup="VerifyCard()" id="txtCard"></dd>
+
+    <dt>CVV</dt>
+    <dd><input type="text" onkeyup="VerifyCVV()" id="txtcvv" disabled size="4"></dd>
+
+   <dt>Expiry</dt>
+   <dd>
+    <select  disabled name="" onchange="Verifyopt()" id="expiry">
+      <option >2022</option>
+      <option >2023</option>
+      <option >2024</option>
+      <option >2025</option>
+
+    </select>
+   </dd>
+
+   <dt>Terms and Conditions</dt>
+   <dd>
+    <textarea >
+      Your are aggre the Terms and Policy
+    </textarea>
+   </dd>
+
+   <dd>
+    <input type="checkbox" onchange="KeyTerm()"  id="acpt"> I Accept
+   </dd>
+
+  
+
+   
+  </dl>
+  </fieldset>
+  <button disabled id="btn">Pay</button>
+
+
+
+  <script>
+    function VerifyCard(){
+      const card = document.getElementById("txtCard").value;
+      if(card == "4445556669820"){
+        document.getElementById("txtcvv").disabled = false;
+        document.getElementById("txtcvv").onfocus();
+
+      }
+    }
+
+    function VerifyCVV(){
+      const cvv = document.getElementById("txtcvv").value;
+      if(cvv == "9820"){
+      
+        document.getElementById("expiry").disabled = false;
+      
+
+      }
+    }
+
+    function Verifyopt(){
+      const select = document.getElementById("expiry").value;
+      if(select == "2025"){
+   
+    
+       document.getElementById("btn").disabled = false;
+
+       KeyTerm();
+
+      }
+    }
+    function KeyTerm(){
+  const select = document.getElementById("expiry").value;
+  const accept = document.getElementById("acpt").checked;
+  const button = document.getElementById("btn");
+
+  if (select === "2025" && accept) {
+    button.disabled = false;
+  } else {
+    button.disabled = true;
+  }
+}
+
+  </script>
+  
+</body>
+</html>

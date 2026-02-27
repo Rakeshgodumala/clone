@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Index Page</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 1in;
+    }
+
+    body {
+      font-family: "Times New Roman";
+      color: #000;
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 25px;
+      text-decoration: underline;
+      margin-bottom: 22px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    th {
+      text-align: center;
+    }
+
+    .sno {
+      width: 10%;
+      text-align: center;
+    }
+
+    .content {
+      width: 70%;
+    }
+
+    .page {
+      width: 20%;
+      text-align: center;
+    }
+
+    .main-item {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .sub-item {
+      margin-left: 20px;
+      margin-bottom: 4px;
+    }
+
+    #ip {
+      margin-top: 15px;
+    }
+
+    .capitalize {
+      text-transform: none; /* JS will handle title casing */
+    }
+  </style>
+</head>
+<body>
+
+<h1>INDEX</h1>
+
+<table>
+  <tr>
+    <th>S. No</th>
+    <th>CONTENTS</th>
+    <th>PAGE NO</th>
+  </tr>
+
+  <tr>
+    <td class="sno">1</td>
+    <td class="content capitalize">Synopsis</td>
+    <td class="page">1–2</td>
+  </tr>
+
+  <tr>
+    <td class="sno">2</td>
+    <td class="content">Scope of the Project</td>
+    <td class="page">3–4</td>
+  </tr>
+
+  <tr>
+    <td class="sno">3</td>
+    <td class="content">
+      <span class="main-item capitalize">System Analysis</span>
+      <div class="sub-item capitalize">3.1 Proposed System (Positive Aspects)</div>
+      <div class="sub-item capitalize">3.2 Existing System (Negative Aspects)</div>
+    </td>
+    <td class="page">5–6</td>
+  </tr>
+
+  <tr>
+    <td class="sno">4</td>
+    <td class="content">
+      <span class="main-item capitalize">Hardware and Software Requirements</span>
+    </td>
+    <td class="page">7–8</td>
+  </tr>
+
+  <tr>
+    <td class="sno">5</td>
+    <td class="content">
+      <span class="main-item capitalize">System Specification</span>
+      <div class="sub-item capitalize">5.1 Modules</div>
+      <div class="sub-item capitalize">5.2 Future Enhancements</div>
+    </td>
+    <td class="page">9–10</td>
+  </tr>
+
+  <tr>
+    <td class="sno">6</td>
+    <td class="content">
+      <span class="main-item capitalize">UML Diagrams</span>
+      <div class="sub-item capitalize">6.1 Class Diagram</div>
+      <div class="sub-item capitalize">6.2 Use Case Diagram</div>
+      <div class="sub-item capitalize">6.3 Sequence Diagram</div>
+      <div class="sub-item capitalize">6.4 Activity Diagram</div>
+      <div class="sub-item capitalize">6.5 Data Flow Diagram</div>
+      <span id="ip" class="main-item">Input and Output Design</span>
+      <div class="sub-item capitalize">6.6 Input Design</div>
+      <div class="sub-item capitalize">6.7 Output Design</div>
+    </td>
+    <td class="page">11–18</td>
+  </tr>
+
+  <tr>
+    <td class="sno">7</td>
+    <td class="content capitalize">Source Code</td>
+    <td class="page">19–52</td>
+  </tr>
+
+  <tr>
+    <td class="sno">8</td>
+    <td class="content capitalize">Software Environment</td>
+    <td class="page">53–76</td>
+  </tr>
+
+  <tr>
+    <td class="sno">9</td>
+    <td class="content capitalize">Screenshots</td>
+    <td class="page">77–85</td>
+  </tr>
+
+  <tr>
+    <td class="sno">10</td>
+    <td class="content capitalize">System Test</td>
+    <td class="page">86–89</td>
+  </tr>
+
+  <tr>
+    <td class="sno">11</td>
+    <td class="content capitalize">Conclusion</td>
+    <td class="page">90–91</td>
+  </tr>
+
+  <tr>
+    <td class="sno">12</td>
+    <td class="content capitalize">Bibliography</td>
+    <td class="page">92</td>
+  </tr>
+</table>
+
+<script>
+  function smartTitleCase(text) {
+    const exceptions = ['and', 'of', 'in', 'on', 'to', 'for', 'with', 'at', 'by', 'from'];
+    return text
+      .toLowerCase()
+      .split(' ')
+      .map((word, index) =>
+        exceptions.includes(word) && index !== 0
+          ? word
+          : word.charAt(0).toUpperCase() + word.slice(1)
+      )
+      .join(' ');
+  }
+
+  document.querySelectorAll('.capitalize').forEach(el => {
+    el.textContent = smartTitleCase(el.textContent);
+  });
+</script>
+
+</body>
+</html>

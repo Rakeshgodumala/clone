@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+          .UserName{
+              border: none;
+              padding: 5px;
+              border-radius: 10px;
+          }
+          .UserName+span{
+              display: none; 
+          }
+          .UserName:focus+span{
+              display: inline;
+          }
+          .UserName:focus {
+            border:3px solid rgb(12, 255, 40);
+               box-shadow: 2px 2px 2px rgb(23, 108, 33);
+           }
+           button:enabled {                       
+            background-color: yellow;
+           }
+           button:disabled {
+               background-color: gray;
+               color:white;
+               border:none;
+               cursor:grab 6666666666666666;
+           }
+            
+        </style>
+    </head>
+    <body>
+        <form>
+            UserName :
+            <input type="text" class="UserName" placeholder="Name in CAPITAL LETTERS">
+            <span>Name in Capital Letters</span>
+            <br><br><br>
+            <button disabled>Submit</button>
+           
+        </form>
+     
+    </body>
+</html>

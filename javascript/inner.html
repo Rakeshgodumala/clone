@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function book(){
+            const x = document.getElementById("txt").value;
+            const y = parseFloat(x)*240;
+            document.write("total ammount is", y)
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="txt">
+    <button onclick="book()">Book</button>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      
+
+        function DeleteClick(){
+               flag = confirm("Record will be deleted");
+               if(flag==true)
+               {
+                   alert("Record Deleted..");
+               }
+               else
+               {
+                   alert("You canceled..");
+               }
+            }
+    </script>
+</head>
+<body>
+    
+    
+   <button onclick="Deleteclick()">DELETE</button>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Hi! </h1>
+    <button onblur="changetxt()">Click me!</button>
+
+    <script>
+        function changetxt(){
+            document.querySelector("h1").innerHTML="hi! John";
+
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bookclick(){
+           let x =  document.getElementById("selticket").value;
+           let total =  parseFloat(x)*240;
+          document.write('total ammount is ' +total)
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <h1>Book my show </h1>
+
+    <fieldset>
+        <legend>Select ticket</legend>
+        <select id="selticket">
+
+            <option value="1">1</option>
+
+            <option value="2">2</option>
+            <option value="3">3</option>
+        
+        </select>
+
+        <button onclick="bookclick()">Book</button>
+    </fieldset>
+    
+</body>
+</html> -->

@@ -1,0 +1,13 @@
+{
+  "Name": "Lamda",
+  "Price": 4536,
+  "Stock": "Available",
+  "Preview":"./images/3.png",
+  "Cities": ["Mumbai", "Delhi", "Kolkatta"],
+  "Ratting": {
+    "Rate":4.5,
+    "Count": 453244
+  }
+}
+
+

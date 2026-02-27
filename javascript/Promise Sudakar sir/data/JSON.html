@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+
+  <title>Document</title>
+
+
+</head>
+<body onload="bodyload()">
+  <table class=" table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Preview</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+  </table>
+  
+
+  <script>
+    function LoadCategory(){
+
+      fetch("./products.json")
+      .then((response)=>{
+        return response.json();
+      })
+     .then((product)=>{
+      for(let pro of product){
+        var item = document.createElement("tr")
+        var tdName = document.createElement("td")
+        var tdPrice = document.createElement("td")
+       var tdPhoto =  document.createElement("td")
+
+
+       tdName.innerHTML = pro.Name;
+       tdPrice.innerHTML = pro.Price;
+
+
+       var img = document.createElement("img")
+       img.src = pro.Photo;
+       img.width = 100;
+       img.height = 100;
+       tdPhoto.appendChild(img);
+
+
+       item.appendChild(tdName);
+       item.appendChild(tdPrice)
+       item.appendChild(tdPhoto)
+       document.querySelector("tbody").appendChild(item)
+      }
+     })
+      
+
+    }
+    function bodyload(){
+      LoadCategory()
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <style>
+    fieldset {
+      border: 2px solid #0d6efd;
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin-top: 10px;
+    }
+    legend {
+      font-weight: bold;
+      color: #0d6efd;
+      padding: 0 10px;
+    }
+  </style>
+</head>
+
+<body class="container-fluid" onload="loadcategories()">
+  <div class="row">
+    <!-- Ordered List -->
+    <div class="col-2">
+      <ol></ol>
+    </div>
+
+    <!-- Checkbox List -->
+    <div class="col-2">
+      <ul></ul>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="col-2">
+      <select></select>
+    </div>
+
+    <!-- Table -->
+    <div class="col-2">
+      <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <td>Select Products</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- PRIMARY BUTTONS COLUMN -->
+    <!-- ✅ CHANGED: previously was a <button>; now it's a <div id="btn-primary"> -->
+    <div class="col-1">
+      <div id="btn-primary" class="btn-group-vertical"></div>
+    </div>
+
+    <!-- SUCCESS BUTTONS COLUMN -->
+    <div class="col-1">
+      <div id="btn-success" class="btn-group-vertical"></div>
+    </div>
+
+    <!-- Fieldset Box -->
+    <div class="col-2">
+      <fieldset id="categoryBox">
+        <legend>Select Categories</legend>
+        <ul id="categoryList"></ul>
+      </fieldset>
+    </div>
+  </div>
+
+  <script>
+    var categories = ["All", "Mobiles", "Electronics", "Shoes", "Silver"];
+
+    function loadcategories() {
+      for (let item of categories) {
+
+        // Ordered List
+        let list = document.createElement("li");
+        list.textContent = item;
+        document.querySelector("ol").appendChild(list);
+
+        // Checkbox List
+        let ul_li = document.createElement("li");
+        ul_li.innerHTML = `<input type="checkbox"> ${item}`;
+        document.querySelector("ul").appendChild(ul_li);
+
+        // Dropdown
+        let select = document.createElement("option");
+        select.textContent = item;
+        document.querySelector("select").appendChild(select);
+
+        // Table
+        let tr = document.createElement("tr");
+        let td = document.createElement("td");
+        td.textContent = item;
+        tr.appendChild(td);
+        document.querySelector("tbody").appendChild(tr);
+
+        // ✅ FIXED: PRIMARY BUTTONS
+        let btn = document.createElement("button");
+        btn.textContent = item;
+        btn.className = "btn btn-primary m-1 w-100";
+        document.getElementById("btn-primary").appendChild(btn);
+
+        // ✅ FIXED: SUCCESS BUTTONS
+        let btns = document.createElement("button");
+        btns.textContent = item;
+        btns.className = "btn btn-success m-1 w-100";
+        document.getElementById("btn-success").appendChild(btns);
+
+        // Fieldset list
+        let fieldsetListItem = document.createElement("li");
+        fieldsetListItem.textContent = item;
+        document.querySelector("#categoryList").appendChild(fieldsetListItem);
+      }
+    }
+  </script>
+</body>
+</html>

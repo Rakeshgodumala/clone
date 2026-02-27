@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  <title>Document</title>
+  <style>
+    body{
+      padding: 0;
+      /* line-height: 1.6;
+      word-spacing: 1.4px; */
+      /* display: flex; */
+     justify-content: center;
+     align-items: center;
+     /* height: 300vh; */
+     border: 5px solid black;
+    }
+   
+    .container{
+      width: 100%;
+      height: 700px;
+      /* margin: 0 auto; */
+      
+      display: flex;
+      /* flex-direction: column; */
+      justify-content:space-around;
+      /* align-items:baseline; */
+      /* flex-wrap: wrap; */
+      /* align-content:space-around; */
+      /* gap:1em; */
+    }
+    .item-3 {
+      /* font-size: 1.5rem; */
+      /* flex-grow:1; */             /* it will grow or enlarge
+      /* flex-shrink:5 ; */
+      /* flex-basis: 900px; */           /* if already width define  using flex basis it will change */
+       /* flex: 1;        /* enlarge according to item */
+       /* align-self:center ;         /*  over wright box particular selected item in class */
+
+       order: -1;  /* if we select .item-2 then order: -1; will became initially*/
+    }
+
+    .item{
+      width: 150px;
+      height: 150px;
+      background-color: blue;
+      padding: 1em;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+ margin: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item item-1">item-1</div>
+    
+    <div class="item item-2">item-2</div>
+    <div class="item item-3">item-3</div>
+
+  
+
+  </div>
+ 
+
+ 
+  <!-- <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> -->
+</body>
+
+</html>

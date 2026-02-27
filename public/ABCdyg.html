@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+           #UserName:invalid+span {
+              display: block;
+           }
+           #UserName:valid+span {
+               display: none;
+           }
+           input:invalid {
+               border:2px solid red;
+           }
+           input:valid {
+               border:2px solid green;
+           }
+           #Password:valid+span {
+              display: none;
+           }
+           #Password:invalid+span {
+               display: block;
+           }
+           #Age:out-of-range+span {
+               display: block;
+           }
+           #Age:in-range+span {
+               display: none;
+           }
+        </style>
+    </head>
+    <body class="container-fluid">
+       <form class="mt-3">
+           <dl>
+               <dt>User Name</dt>
+               <dd> <input type="text" id="UserName" required name="UserName">
+                    <span class="text-danger">User Name Required</span>
+              </dd>
+              <dt>Password</dt>
+              <dd>
+                  <input type="password" required id="Password" pattern="[A-Z]{4,10}">
+                  <span class="text-danger">Password 4 to 10 Uppercase Only</span>
+              </dd>
+              <dt>Age</dt>
+              <dd>
+                  <input type="number" required id="Age" min="15" max="30">
+                  <span class="text-danger">Age 15 to 30 Only</span>
+              </dd>
+           </dl>
+           <button>Submit</button>
+       </form>
+    </body>
+</html>

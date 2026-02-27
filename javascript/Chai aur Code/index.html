@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Example</title>
+</head>
+<body>
+  <p>Hi, How are you?</p>
+
+  <!-- First button using onclick function -->
+  <button onclick="createClick()">Click me!</button>
+
+  <!-- Second button using addEventListener -->
+  <button id="btn">Click here!</button>
+
+  <!-- Commented out button using proper HTML comment -->
+  <!-- <button id="btn2">Click me!</button> -->
+
+<script>
+  // Function for the first button
+  function createClick() {
+    alert("You clicked the first button!");
+
+
+  }
+
+  // Event listener for the second button
+  document.querySelector("#btn").addEventListener("click", function(e) {
+    console.log("Event Object:", e); 
+    // console.log("Event Phase:", e.eventPhase);
+    // Event phase values:
+    // 1 = Capturing phase
+    // 2 = At target
+    // 3 = Bubbling phase
+
+ 
+  // console.log(e.target)               //parentNode meand where it coming eg: id btn  is in body. so body is parentNode.  here e.target means it will target in console what is it . it will show     <button id="btn">Click here!</button>
+
+
+
+  // let removeItem = e.target;
+  // removeItem.remove()                                  //this will remove particular mention target ie: btn  if we use e.target.parentNode  then it's parent node is body  then if u use instead of e.target   used e.target.parentNode then entre body will remove
+
+  
+
+
+  });
+
+</script>
+</body>
+</html>

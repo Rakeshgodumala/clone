@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <h1>Hi!,  Click the below button to change to color</h1>
+
+  <!-- <button onclick="grey()">Grey</button>
+  <button onclick="black()">Black</button> -->
+
+
+
+  
+  <button>green</button>
+  <button>yellow</button>
+  
+  <button>grey</button>
+  <button>black</button>
+  <button>dark blue</button>
+
+
+
+
+
+
+  <script>
+    // function grey(){
+    //   document.body.style.backgroundColor='#55f';
+    // }
+
+    // function black(){
+    //   document.body.style.backgroundColor='black';
+     
+
+    // }
+
+
+    let btn = document.getElementsByTagName('button');
+    btn[0].addEventListener('click', ()=>{
+      document.body.style.backgroundColor='green';
+
+    })
+
+    btn[1].addEventListener('click', ()=>{
+      document.body.style.backgroundColor='yellow';
+
+    })
+
+    btn[2].addEventListener('click', ()=>{
+      document.body.style.backgroundColor=' grey';
+
+    })
+
+    btn[3].addEventListener('click', ()=>{
+      document.body.style.backgroundColor='black';
+
+    })
+    btn[4].addEventListener('click', ()=>{
+      document.body.style.backgroundColor=' blue';
+
+    })
+  </script>
+</body>
+</html>

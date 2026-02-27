@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+
+    <script type="text/javascript">
+function btnclick(){
+     X = confirm("Record will be Delete");
+     if(X == true){
+        document.write("<h2>Deleted</h2><p>The selected record deleted permanently.</p>");
+        console.error("DELETED")
+    
+     }
+     else{
+        document.write(" <h1> Cancelled...</h1>");
+     }
+}
+
+    </script>
+</head>
+<body onclick="btnclick()">
+    <h1>Register</h1>
+
+    <button class="btn-secondary">Delete</button>
+   
+</body>
+</html>  
+        

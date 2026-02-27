@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 400px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #555;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Registration</h2>
+        <form name="RegForm" onsubmit="return validateForm()" method="post">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name">
+            <span class="error" id="nameError"></span>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="Address">
+            <span class="error" id="addressError"></span>
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="EMail">
+            <span class="error" id="emailError"></span>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="Password">
+            <span class="error" id="passwordError"></span>
+
+            <label for="phone">Telephone:</label>
+            <input type="text" id="phone" name="Telephone">
+            <span class="error" id="phoneError"></span>
+
+            <label for="subject">Select Your Course:</label>
+            <select id="subject" name="Subject">
+                <option value="">Select Course</option>
+                <option value="MTECH">MTECH</option>
+                <option value="BTECH">BTECH</option>
+                <option value="MBA">MBA</option>
+            </select>
+            <span class="error" id="subjectError"></span>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Get form elements and trim whitespace
+            let name = document.getElementById("name").value.trim();
+            let address = document.getElementById("address").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let subject = document.getElementById("subject").value;
+
+            // Regex Patterns for validation
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            let phonePattern = /^[0-9]{10}$/;
+
+            // Reset previous errors
+            document.querySelectorAll(".error").forEach((el) => el.innerText = "");
+
+            // Name Validation
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required.";
+                isValid = false;
+            }
+
+            // Address Validation
+            if (address === "") {
+                document.getElementById("addressError").innerText = "Address is required.";
+                isValid = false;
+            }
+
+            // Email Validation
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Invalid email format.";
+                isValid = false;
+            }
+
+            // Password Validation
+            if (password === "") {
+                document.getElementById("passwordError").innerText = "Password is required.";
+                isValid = false;
+            } else if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters.";
+                isValid = false;
+            }
+
+            // Phone Number Validation
+            if (phone === "") {
+                document.getElementById("phoneError").innerText = "Phone number is required.";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText = "Invalid phone number! Must be 10 digits.";
+                isValid = false;
+            }
+
+            // Course Selection Validation
+            if (subject === "") {
+                document.getElementById("subjectError").innerText = "Please select a course.";
+                isValid = false;
+            }
+
+            return isValid; // Stops form submission if validation fails
+        }
+    </script>
+
+</body>
+</html>

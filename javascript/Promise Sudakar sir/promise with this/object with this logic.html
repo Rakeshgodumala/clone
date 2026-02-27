@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <script>
+    let product = {
+      "Name": "",
+      "Price": 0,
+      "Quantity": 0,
+      "Total" : function(){
+        return this.Quantity * this.Price;
+      },
+      "Output": function(){
+        document.write(`Name = ${this.Name} <br> Price = ${this.Price} <br> Quantity = ${this.Quantity} <br> Total = ${this.Total()}`)
+
+      }
+
+      }
+      product.Name = prompt("enter the name");
+      product.Price = parseFloat(prompt("Enter price"));
+      product.Quantity = parseInt(prompt("Please Enter the Quantity"));
+      product.Output();
+    
+  </script>
+   -->
+
+   
+
+ <script>
+  
+
+
+  let product = {
+    "Name": "",
+    "Brand":"",
+    "Price": 0,
+
+    "Quantity": 0,
+    "Total": function(){
+     return this.Quantity * this.Price;
+    },
+    "Print":function(){
+      document.write(`Name=${this.Name} <br> Brand Name=${this.Brand} <br> Price = ${this.Price} <br> Quantity= ${this.Quantity} <br>  Total Rupees= ${this.Total()}`)
+    }
+  }
+  product.Name= prompt("Enter the Product Name");
+  product.Brand = prompt("Please Enter the Brand Name");
+  product.Price = parseFloat(prompt("Please Enter the price"));
+  product.Quantity = parseInt(prompt("Please Enter the Quantity"));
+  product.Print();
+
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+

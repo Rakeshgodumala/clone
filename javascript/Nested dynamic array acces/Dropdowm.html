@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body onload="body()">
+
+  <select >
+
+  </select>
+  
+
+
+  <script>
+    var categories = [
+      {
+        "Electronic": "Mobiles",
+        "Brand": ["Vivo", "Samsung"]
+      },
+      {
+        "Electronic": "Sneakers",
+        "Brand": ["Puma", "DSC Shoes"]
+      }
+    ]
+    function body(){
+      for(let cat of categories){
+        var opt = document.createElement("optgroup")
+        opt.label = cat.Electronic
+        // document.querySelector("select").appendChild(opt)
+
+        for(let item of cat.Brand){
+          let option = document.createElement("option")
+          option.text= item
+          option.value = item
+         opt.appendChild(option)
+         document.querySelector("select").appendChild(opt)
+
+        }
+      }
+
+    }
+  </script>
+</body>
+</html>

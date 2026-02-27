@@ -1,0 +1,39 @@
+
+
+
+[
+  {
+    "Name": "Samsung Mobile",
+    "Price": 6999.34,
+    "Photo": "./images/6.png"
+  },
+  {
+    "Name": "Honar Mobile",
+    "Price": 9394.34,
+    "Photo": "./images/7.png"
+  },
+  {
+    "Name": "Vivo Mobile",
+    "Price": 8994.34,
+    "Photo": "./images/4.png"
+  },
+
+  {
+    "Name": "Iphone Mobile",
+    "Price": "2,99,994.00",
+    "Photo": "./images/19.png"
+  },  
+  {
+    "Name": "Intel Mobile",
+    "Price": 59994.34,
+    "Photo": "./images/18.png"
+  }, {
+    "Name": "Redmi Mobile",
+    "Price": 9994.34,
+    "Photo": "./images/15.png"
+  },{
+    "Name": "Oppo Mobile",
+    "Price": 3994.34,
+    "Photo": "./images/17.png"
+  }
+]

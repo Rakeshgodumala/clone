@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<!-- <script>
+  / function folderclick(){
+  //  defaultname= prompt("Your name pleas?")
+
+  //   document.write("Hello!" + defaultname)
+  // }
+</script> -->
+<body class="container-fluid">
+<script>
+  
+// var x = [1,2,3,4,5]
+
+// let y = "js";
+// var z = 30;
+
+// function one(){
+//   window.username="World.";
+// document.write("val of x= " + x + "<br> y= " + y + "<br> z= " + z);
+// }
+
+// function two(){
+
+//   document.write("Hello!"+username)
+// }
+// one()
+// two()
+
+
+function CalculateClick(){
+            var age = document.getElementById("Age").value;
+            document.getElementById("msg").innerHTML = (parseInt(age)+1);
+         }
+
+</script>
+  <!-- <button onclick="folderclick()" class="btn btn-link">Enter your name</button> -->
+  
+  Age: <input type="number" id="Age" min="15" max="30">
+           <button onclick="CalculateClick()">Calculate</button>
+           <span id="msg"></span>
+</body>
+</html>

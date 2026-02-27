@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function book(){
+
+      let  x = document.getElementById("txt").value;
+    let y = document.getElementById("msg");
+    console.log(x)
+
+    if(x.charCodeAt(0)>=65 && x.charCodeAt(0)<=90){
+      y.innerHTML="Please Enter a num";
+    }else{
+      y.innerHTML=" ";
+
+    }
+
+    }
+   
+  </script>
+</head>
+<body>
+
+  <input type="text"  id="txt">
+  <div id="msg"></div>
+  <button onclick="book()">Book</button>
+  
+</body>
+</html>

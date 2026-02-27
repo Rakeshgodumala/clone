@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            #box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 500px;
+            }
+            body {
+                background-color: black;
+                color:white;
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+       <div id="box">
+          <div>
+            <div class="input-group">
+                <select class="input-group-text">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Footwear</option>
+                    <option>Fashion</option>
+                </select>
+                <input type="text" placeholder="amazon search" class="form-control">
+                <button class="btn btn-warning">
+                    <span class="bi bi-search"></span>
+                </button>
+            </div>
+            <br><br>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="input-group input-group-lg">
+                <input type="email" placeholder="Your email address" class="form-control">
+                <button class="btn btn-danger">
+                    Get Started
+                    <span class="bi bi-chevron-right"></span>
+                </button>
+            </div>
+           
+          </div>
+       </div>
+    </body>
+</html>

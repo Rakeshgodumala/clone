@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onclick</title>
+  <script>
+    function selectText(){
+      document.querySelector("h1").innerText="I am learning Javascript along with React.js ! "
+    }
+
+  </script>
+</head>
+<body>
+  <h1 >Hi, I am Learning Javascript only</h1>
+  <button onclick="selectText()">Learn Both!</button>
+
+  
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onclick</title>
+  <style>
+    body {
+      margin: 0;.
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      transition: background-color 0.5s ease;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 50px;
+      transition: color 0.5s ease;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
+      transform: scale(1.05);
+    }
+
+    /* Dark mode styles */
+    .dark-mode {
+      background-color: #121212;
+    }
+
+    .dark-mode h1 {
+      color: #00ffe7;
+    }
+
+    .dark-mode button {
+      background-color: #00bcd4;
+      color: #121212;
+    }
+
+    .dark-mode button:hover {
+      background-color: #0097a7;
+      box-shadow: 0 5px 15px rgba(0, 188, 212, 0.5);
+    }
+  </style>
+  <script>
+    function selectText(){
+      document.querySelector("h1").innerText = "I am learning Javascript along with React.js!";
+      document.body.classList.add("dark-mode");
+    }
+  </script>
+</head>
+<body>
+  <h1>Hi, I am Learning Javascript only</h1>
+  <button onclick="selectText()">Learn Both!</button>
+</body>
+</html>

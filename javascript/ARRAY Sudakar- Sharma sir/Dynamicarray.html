@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="container">
+
+  </div>
+  <button onclick="CreateClick()">Image Click</button>
+
+  <script>
+
+    function CreateClick(){
+
+      let pic = document.createElement("img");
+      pic.src="../clone/public/images/banner.jpg";           //image is not in this path
+      pic.width="100";
+      pic.height="100"
+
+      document.getElementById("container").appendChild(pic)
+    }
+
+  </script>
+  
+</body>
+</html>

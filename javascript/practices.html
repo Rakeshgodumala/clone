@@ -1,0 +1,12 @@
+<script>
+    var username = prompt("Enter Name");
+    var now = new Date();
+    var hrs = now.getHours();
+    if(hrs>=00 && hrs<=12){
+        document.write(`Hello ! ${username} Good Morning `);
+    } else if(hrs>12 && hrs<=17) {
+        document.write(`Hello ! ${username} Good Afternoon`);
+    } else if(hrs>17 && hrs<=23) {
+        document.write(`Hello ! ${username} Good Evening`);
+    }
+</script> 

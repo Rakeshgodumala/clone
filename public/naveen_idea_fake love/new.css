@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.animation-box {
+  width: 75%;
+  height: 27.5rem;
+  background-color: black;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.first-text, .second-text, .third-text, .fourth-text, .fifth-text {
+  font-size: 2rem;
+  opacity: 1;
+  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

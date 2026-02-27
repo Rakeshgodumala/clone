@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function mailclick(){
+      const user = document.getElementById("txt").value;
+      const message = document.getElementById("msg")
+      if(user.indexOf("@")==-1){
+        message.innerHTML="@ is missing".fontcolor("red").bold().italics();
+      }else if(user.indexOf(".")==-1){
+        message.innerHTML=". is missing".fontcolor("red").bold().italics();
+      }else{
+        message.innerHTML=" valid".fontcolor("green").bold().italics();
+      }
+
+
+    }
+  </script>
+</head>
+
+<body>
+
+
+    Email: <input type="text" id="txt"> <br><br>
+  <div id="msg"></div>
+  <button onclick="mailclick()">Submit</button>
+</body>
+</html>

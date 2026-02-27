@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        header{
+            font-size: 40px;
+            text-align: center;
+            background-image: url(../public/images/slide1.png);
+            width: 100%;
+        }
+        
+        header p{
+            text-shadow: 1px 1px red;
+            color:goldenrod;
+            padding: 10px;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+   
+        }
+        footer{
+            font-size: 20px;
+            text-align: center;
+           background-color: rgb(171, 171, 171);
+            width: 100%;
+
+         
+        }
+        footer p{
+            text-shadow: 2px 2px grey;
+            color: #fff;
+            padding: 20px;
+           font-size: 30px;
+           font-weight: bold;
+        }
+
+      
+        nav div{
+            color: #fff;
+        margin: 15px;
+        background-color: rgba(2, 2, 56, 1);
+            width: 120px;
+            height: 20;
+            padding: 8px;
+            border-radius: 5px;
+            margin-left: -88px;
+           transition: 1s;
+        }
+        nav div:hover{
+            margin-left: -30px;
+            transition: 2s;
+            text-align: center;
+        }
+    
+       
+       aside p{
+        color: rgb(239, 4, 4);
+        
+        font-size: 40px;
+        float: left;
+       }
+     main{
+        background-image: url(../public/images/netflixbanner.png);
+
+     }
+
+     img{
+        height: 75px;
+        width: 90px;
+        float: right;
+        margin-bottom: 100px;
+        transition: 2s;
+      
+     }
+     img:hover{
+        height: 150px;
+        width: 200px;
+   
+        
+        transition: 2s;
+     }
+    span{
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <header>
+<p>UI Full Stack Web Development</p>
+    </header>
+
+    <section>
+       <menu>
+        <nav>
+          <div class="bi bi-house-fill">&nbsp; Home</div>
+          
+          <div class="bi bi-facebook" style="color: rgb(11, 46, 219);">&nbsp; <span>Facebook</span></div>
+          <div class="bi bi-instagram" style="color: rgb(226, 19, 53);">&nbsp; <span>Instagram</span></div
+            
+>
+          <div class="bi bi-whatsapp" style="color: rgb(1, 165, 72);">&nbsp; <span>What's UP</span> </div>
+          
+  
+
+          <div class="bi bi-telephone" style="color: rgb(234, 7, 7);"> &nbsp; <span>Contact</span> </div>
+          
+        </nav>
+
+       </menu>
+        <main>
+            <aside>
+                <P>This is a Netflix Website</P>
+            </aside>
+
+            <img src="../public/images/Remote Control Car.webp"  >
+        </main>
+        </main>
+
+    </section>
+
+    <footer>
+        <p>@copywrite with Amazon Shooping</p>
+
+    </footer>
+    
+
+</body>
+</html>

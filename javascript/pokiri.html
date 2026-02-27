@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Output javascript</title>
+        <script>
+            function bodyload(){
+              window.document.querySelector("#btn").value="Confirm";
+              window.document.querySelector("img").src="../public/images/jail. IPS Arrested.png";
+             x = window.document.querySelector("#btn2").value="Login";
+              
+              confirm("Not Valid /  criminal=" + x.length);
+              
+            
+        }
+           
+        </script>
+    </head>
+    <body onload="bodyload()"> 
+        <div>
+            <h1>Layout</h1>
+            <img border="1" height="120" width="120">
+        </div>
+        <div name="frm">
+           <p>Register</p>
+            Name:<input type="text"> <input id="btn" type="button">
+        </div>
+        <div name="frm2">
+            <p>Login</p>
+             Name:<input type="text"> <input id="btn2" type="button">
+         </div>
+    </body>
+</html>

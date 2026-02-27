@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body onload="body()">
+
+  <ol>
+   
+
+  </ol>
+
+ 
+
+
+  <script>
+    let categories = [
+      {
+        "Product": "Electronics",
+        "Brands" : ["Samsung", "Honar"]
+      },
+      {
+        "Product": "Shoes",
+        "Brands" : ["Puma", "Paragoan"]
+      }
+
+
+    ]
+    
+function body(){
+  for(let item of categories){
+    var li = document.createElement("li")
+    li.innerHTML = item.Product
+    document.querySelector("ol").appendChild(li)
+    for(var items of item.Brands){
+      var ul = document.createElement("ul")
+      var unli = document.createElement("li")
+      unli.innerHTML= items
+      ul.appendChild(unli)
+      li.appendChild(ul)
+    }
+  }
+}
+  </script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

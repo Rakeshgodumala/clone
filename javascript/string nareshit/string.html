@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function Book(){
+      let booktxt = document.getElementById("txt").value;
+      if(isNaN(booktxt)){
+        document.getElementById("msg").innerHTML="Please Enter a Number".fontcolor("red").bold().italics();
+      } else{
+
+        let total = parseFloat(booktxt)*250;
+        document.getElementById("msg").innerHTML=`Total Ammount: ${total}`.fontcolor("green").bold().italics();
+      }
+      
+   
+
+    }
+  </script>
+</head>
+
+<body>
+  <h1 style="color: red; text-align: center; border: 1px solid grey; padding:10px">BookMy Show</h1>
+
+  <fieldset>
+
+    <legend >Select Tickets</legend>
+    <input type="text" id="txt">
+    <button onclick="Book()">Book</button>
+    <div id="msg"></div>
+   
+  </fieldset>
+  
+</body>
+</html>

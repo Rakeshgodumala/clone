@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // function Verify(password, success, failuer){
+    //   if(password == "admin"){
+    //     success();
+    //   }else{
+    //     failuer();
+    //   }
+
+    // }
+    // let password = prompt("enter")
+
+    // Verify(password,function(){document.write(" Success")},function(){document.write("Invalid")});
+
+
+
+
+    // *************************second code ****************  REST Parameter
+
+
+
+  //   function VerifyPassword(...Verify){
+    
+  //   let[password, success, failuer] = Verify;
+
+  //   if(password == "pass"){
+
+  //     success();
+  //   }else{
+  //     failuer();
+  //   }
+
+
+  // }
+
+  // let password = "pass";
+  // VerifyPassword(password, function(){document.write("Login Successfully")}, function(){document.write("It is failuer")})
+    
+  //output: Login Successfully
+  
+
+
+
+
+
+  ///////////////////////////////////////////////////////////
+
+    // function VerifyPassword(...Verify){
+    
+    //   let[password, success, failuer] = Verify;
+
+    //   if(password == "admin"){
+
+    //     success();
+    //   }else{
+    //     failuer();
+    //   }
+
+
+    // }
+
+    // let admin = "password";
+    // VerifyPassword(admin, function(){document.write("Login Successfully")}, function(){document.write("It is failuer")})
+
+    // //output: It is failuer
+
+
+
+
+
+    /////////////////////////////////////////////////////////////////////
+
+    
+  //   function VerifyPassword(...Verify){
+    
+  //   let[password, success, failuer] = Verify;
+
+  //   if(password == "pass"){
+
+  //     success();
+  //   }else{
+  //     failuer();
+  //   }
+
+
+  // }
+
+
+  // VerifyPassword("pass", function(){document.write("Login Successfully")}, function(){document.write("It is failuer")})
+
+
+
+
+
+
+
+  function product(cateory){
+    for(let item of cateory){
+      document.write(item, "<br>")
+      console.log(item)
+    }
+
+
+  }
+  product(["Electronic", "MOBILE", 78323])
+  
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+ 
+
+</head>
+<body class="container-fluid" onload="loadcategories()">
+  <div class=" row">
+    <div class="col-2">
+      <ol></ol>
+    </div>
+
+    <div class="col-2">
+     <ul class=""></ul>
+    
+    </div>
+
+
+    
+    <div class="col-2">
+    <select> </select>
+     
+     </div>
+
+
+     <div class="col-2">
+      <table class=" table table-hover table-dark">
+        <thead>
+          <tr>
+            <td>Select Products</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+       
+       </div>
+
+
+       <div  class="col-1">
+        <div id="btn-success" class="btn btn-group-vertical">
+
+        </div>
+       </div> 
+
+    
+
+    
+
+       <div class="col-1">
+      <div id="btn-primary">
+        <button class="btn btn-group-vertical"></button>
+      </div>
+     
+
+       </div>
+
+       
+       <div class="col-2">
+        <!-- The main fieldset box -->
+        <fieldset id="categoryBox">
+          <legend>Select Categories</legend>
+          <ul id="categoryList"></ul>
+        </fieldset>
+     </div> 
+  
+  </div>
+  
+</body>
+
+<script>
+  var categories = ["All", "Mobiles", "Electronics", "Shoes", "Silver"]
+
+
+  
+
+  function loadcategories(){
+   
+    
+    for(let item of categories){
+
+    
+
+
+      let list = document.createElement("li")
+      list.innerHTML=item;
+      document.querySelector("ol").appendChild(list);
+
+      let ul_li = document.createElement("ul")
+      ul_li.innerHTML=`<input type="checkbox"> ${item} </input>`;
+      document.querySelector("ul").appendChild(ul_li);
+      
+
+      let select = document.createElement("option")
+      select.innerHTML=item;
+      document.querySelector("select").appendChild(select);
+
+
+  
+
+      let tr_table = document.createElement("tr")
+      let td_table = document.createElement("td")
+      td_table.innerHTML= item;
+      tr_table.appendChild(td_table)
+      document.querySelector("tbody").appendChild(tr_table)
+
+
+
+      let btn = document.createElement("button");
+      btn.innerHTML=item;
+      btn.className="btn btn-primary w-100 m-1";
+      document.querySelector("#btn-primary").appendChild(btn)
+
+
+
+      let btns = document.createElement("button")
+      btns.innerHTML=item;
+      document.getElementById("btn-success").appendChild(btns)
+      btns.className="btn btn-success w-100 m-1"
+
+
+
+      let fieldsetListItem = document.createElement("li");
+        fieldsetListItem.textContent = item;
+        document.querySelector("#categoryList").appendChild(fieldsetListItem);
+
+
+    }
+  }
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

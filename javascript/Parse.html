@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book My Show</title>
+  <script>
+    function checkTickets(){
+      let tickets = document.querySelector("#lst").value;
+      let msg = document.querySelector("#msg");
+      let selectBtn = document.querySelector("#selectBtn");
+      let payBtn = document.querySelector("#payBtn");
+
+      if(tickets == 0){
+        // msg.innerHTML = '<span style="color:red"> Please select tickets</span>';
+        // msg.innerHTML = " Please select tickets.".fontcolor("red");
+//////////////////////////or////////////////////////
+        // msg.innerText = " Please select tickets.";
+        // msg.style.color = "red"; 
+
+
+        selectBtn.style.display = "inline-block"; // show button
+        payBtn.style.display = "none"; // hide pay button
+      } else {
+        let result = parseInt(tickets) * 250;
+        msg.innerText = `Total Amount is ₹${result}`;
+        selectBtn.style.display = "none"; // hide select button
+        msg.style.color = "green "; 
+        payBtn.style.display = "inline-block"; // show pay button
+      }
+    }
+
+    function Pay(){
+      alert("Payment Successful! ✅");
+    }
+  </script>
+</head>
+<body>
+  <h1 style="color:red; text-align: center;">Book My Show</h1>
+
+  <select id="lst" onchange="checkTickets()">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <button id="selectBtn" onclick="checkTickets()">Select Tickets</button>
+
+  <p id="msg" style="font-weight: bold; margin-top: 10px;"></p>
+  
+  <button id="payBtn" onclick="Pay()" style="display:none; margin-top:10px;">Pay</button>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book My Show</title>
+  <script>
+    function checkTickets(){
+      let tickets = document.querySelector("#lst").value;
+
+      if(tickets == 0){
+        document.querySelector("#msg").innerHTML = "<span style='color:red;'>Please select tickets.</span>";
+      } else {
+        let result = parseInt(tickets) * 250;
+        document.write(`
+          <h1 style="color:red; text-align: center;">Book My Show</h1>
+          <p style="color:green; font-weight:bold;">Total Amount is ₹${result}</p>
+          <button onclick="Pay()">Pay</button>
+        `);
+      }
+    }
+
+    function Pay(){
+      document.write("<h2 style='color:green;'>Payment Successful ✅</h2>");
+    }
+  </script>
+</head>
+<body>
+  <h1 style="color:red; text-align: center;">Book My Show</h1>
+
+  <select id="lst">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+
+  <button onclick="checkTickets()">Select Tickets</button>
+
+  <p id="msg" style="font-weight:bold; margin-top:10px;"></p>
+</body>
+</html> -->
