@@ -433,3 +433,6 @@ console.log(`Odd Average : ${avg}`)
 // arr[4] = 99;                                 //// agar arr[2]  and initial 3 length  which is < 2  then output 3 only no change  but if arr[4] initail 3 length and 4> 3 then which is extra 1 ie:  first length and arr[4]means that 3,4 this 2 num ie  3 + 2= 5
 // console.log(arr.length);                                             ////ouput = 5
 
+
+
+

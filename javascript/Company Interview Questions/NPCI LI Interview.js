@@ -51,7 +51,7 @@ function flatten(input) {
   let result = [];
 
   for (let item of input) {
-    if (Array.isArray(item)) {
+    if (arr.isArray(item)) {
       result = result.concat(flatten(item));
     } else {
       result.push(item);
