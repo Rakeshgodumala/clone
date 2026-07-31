@@ -206,7 +206,52 @@
 
 
 
-let x = 100;  //100
-// let y =++x;   // x = 101, y = 101
-let y  = x++    // y = 100, x = 101
-console.log(x+y)
+// let x = 100;  //100
+// // let y =++x;   // x = 101, y = 101
+// let y  = x++    // y = 100, x = 101
+// console.log(x+y)
+
+
+
+/////////HOF  with callback  most important
+
+
+const  add = (a, b, cb) => {
+  let result =  a + b;
+  cb(result);              // callback 
+}
+
+////////////******** method 1 = to call  the add function as HOF */
+function show(val){
+  console.log(val);
+
+}
+add(2,3, show);
+
+
+
+////////////******** method 2 = to call  the add function as HOF */
+// add(2,3, function show(val){
+//   console.log(val);
+
+// });
+
+
+
+////////////******** method 3 = to call  the add function as HOF */
+
+// add(2,3, function (val){
+//   console.log(val);
+
+// });
+
+
+
+
+////////////******** method 4 = to call  the add function as HOF */
+
+// add(2,3,  (val) => console.log(val); )
+
+
+
+

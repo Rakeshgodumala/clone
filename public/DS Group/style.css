@@ -1,0 +1,158 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:white;
+}
+
+header{
+background:#333;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+nav a:hover{
+color:yellow;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:10px 25px;
+background:#333;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.services{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:40px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+text-align:center;
+box-shadow:0 0 10px lightgray;
+}
+
+.page{
+padding:50px;
+text-align:center;
+}
+
+.form-box{
+background:white;
+width:350px;
+margin:50px auto;
+padding:25px;
+box-shadow:0 0 10px gray;
+}
+
+.form-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.form-box button{
+width:100%;
+padding:10px;
+background:#333;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+footer{
+background:#333;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+display:block;
+margin:10px;
+text-align:center;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.form-box{
+width:90%;
+}
+
+}
+
+
+
+.form-box input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:4px;
+outline:none;
+}
+
+.form-box input:focus{
+
+border:1px solid #333;
+
+}
+
+#loginMsg, #signupMsg{
+margin-top:15px;
+font-weight:bold;
+text-align:center;
+}
+
+.form-box button:hover{
+background:#555;
+}

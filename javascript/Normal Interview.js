@@ -31,20 +31,20 @@
 
 
 
-// const abc = {
-//   name: "abishek",
-//   age: 25,
-//   address: "Mumbai"
-// }
+const abc = {
+  name: "abishek",
+  age: 25,
+  address: "Mumbai"
+}
 
-// let xyz = {
-//   ...abc,
-//   name:"Ankit",
-// }
+let xyz = {
+  ...abc,
+  name:"Ankit",
+}
 
-// const {name, ...pqr} = abc;
-// console.log(pqr, xyz);
-
+const {name, ...pqr} = abc;
+console.log(pqr, xyz);
+ 
 
 
 
@@ -52,7 +52,7 @@
 
 
 // largest number and second largest number find
-  // this is with array
+//   this is with array
 
 
 // let arr = ["JAVASCRIPT", "PYTHON","REACT.JS","JAVA"];

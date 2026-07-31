@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login singup</title>
+    <style>
+       *{
+        margin : 0;
+        padding : 0px;
+        box-sizing:border-box;
+        font-family: Arial;
+       }
+      body{
+        display: flex;
+    
+        background: #555;
+        justify-content: center;
+        align-item: center;
+        padding: 20px;
+
+      }
+
+      input{
+        width: 100%;
+        padding: 10px;
+        margin: 10px , 0;
+      }
+      
+      button{
+        width: 10%;
+        padding: 10px;
+        cursor: pointer;
+        
+      }
+
+      #singup{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+      }
+
+        #singin{
+        /* display: none; */
+          justify-content: center;
+        align-items: center;
+      }
+      h2{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .box{
+        width: 100%;
+  max-width: 700px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border-radius: 10px;
+      }
+      </style>
+    
+
+</head>
+
+<body>
+<div class="box">
+  <div id ="singin">
+    <h2> login </h2>
+ <input type="text" placeholder="Name">
+ <button  id="s">Sign IN</button>
+ <p onclick="Showlogin"></p>
+  
+  </div>
+
+<div id="singup"></div>
+  <h2> Sing up</h2>
+ <input type="text" placeholder="Name">
+ <button id="r">Sign Up</button>
+ <p onclick="ShowRegister"></p>
+
+</div>
+
+</div>
+
+<script>
+  function Showlogin(){
+    document.getElementById("s").style.display ="none";
+    document.getElementById("s").style.display ="block";
+
+
+  }
+
+
+    function ShowRegister(){
+    document.getElementById("r").style.display ="none";
+    document.getElementById("r").style.display ="block";
+
+  }
+  </script>
+
+</body>
+   </html>
